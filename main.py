@@ -1,4 +1,6 @@
 import boto3
+import numpy as np  # noqa: F401 -- top-level import so Burla installs numpy on workers
+import rasterio  # noqa: F401 -- top-level import so Burla installs rasterio (bundles GDAL) on workers
 from burla import remote_parallel_map
 
 SRC_BUCKET = "sentinel-s2-l2a"
