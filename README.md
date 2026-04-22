@@ -86,8 +86,3 @@ You pass a list of tile IDs and a function that processes one tile. Burla runs `
 - Re-running an analysis over every tile in a continent.
 - Chipping large scenes into ML training patches.
 
-## When NOT To Use This
-
-- Operations that need neighboring tiles to talk to each other (seamless mosaicking with blending, tile-edge dependencies) - use a tool that understands the tile graph.
-- Interactive tile serving - use a tile server, not a batch map.
-- Single very large rasters (one 500 GB GeoTIFF) - chunk by window first, then Burla.
