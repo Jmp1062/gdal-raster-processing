@@ -2,6 +2,12 @@
 
 Process Sentinel-2, Landsat, or NAIP tiles at the same time on thousands of cloud machines. One tile per worker. One function call.
 
+## Try it in Google Colab
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Burla-Cloud/gdal-raster-processing/blob/main/Burla_GDALRaster_Demo.ipynb)
+
+Follow along in a notebook - compute NDVI on 6 public Sentinel-2 tiles across 6 cloud workers in about 4 minutes. No prior Burla knowledge needed.
+
 ## The Problem
 
 You have 2,000 Sentinel-2 tiles on S3 and you want to compute NDVI, reproject, or clip them. A single-core `gdalwarp` or `rasterio` loop takes days. GDAL is hard to containerize cleanly - native deps, PROJ versions, GDAL_DATA paths. Running it on 1,000 EC2 instances yourself means AMIs, user-data scripts, and a queue.
